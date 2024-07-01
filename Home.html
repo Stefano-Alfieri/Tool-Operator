@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
-<body>
-    
 
+<body>
+    <!--inizio navbar-->
+    <nav class="navbar navbar-expand-lg backBluChiaro">
+        <div class="container">
+            <img src="media/Logo.png" class="logo" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white el-nav" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white el-nav" href="#">Destinazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white el-nav" aria-disabled="true">Offerte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white el-nav" href="#">Crea Il Tuo Preventivo</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto me-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white el-nav" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Accedi Utente</a></li>
+                            <li><a class="dropdown-item" href="#">Registrati Utente</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Accedi Agenzia</a></li>
+                            <li><a class="dropdown-item" href="#">Registrati Agenzia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
 
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
