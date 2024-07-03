@@ -11,6 +11,7 @@
   .login-form-1 h3{
     text-align: center;
     color: rgb(16%, 50%, 73%);
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
   }
   .login-form-2{
     padding: 5%;
@@ -20,6 +21,7 @@
   .login-form-2 h3{
     text-align: center;
     color: rgb(98%, 69%, 2%);
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
   }
   .login-container form{
     padding: 10%;
