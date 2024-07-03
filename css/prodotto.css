@@ -3,14 +3,32 @@
     width: 90vw;
     margin-bottom: 3rem;
 }
-.img2{
-    height: 70vh;
-    width: 45vw;
-    margin-bottom: 3rem;
-}
+
 .testo{
     margin-bottom: 3rem;
 }
 .titolo{
     color: var(--blu);
+}
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+h2, h1{
+    font-family:'Times New Roman', Times, serif
+}
+@media only screen and (max-width: 767px) {
+    .descCitt{
+        display: none;
+    }
+    .nomeCitt{
+        display:block;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .descCitt{
+        display: none;
+    }
+    .nomeCitt{
+        display:block;
+    }
 }

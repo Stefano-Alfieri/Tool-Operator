@@ -17,11 +17,36 @@
 .nomeCitt{
     display: none;
 }
+.btnDest:hover{
+color: var(--giallo) !important;
+}
+.btnDest{
+    color:white !important;
+}
+h2, h1{
+    font-family:'Times New Roman', Times, serif
+}
+h2{
+    color: var(--giallo) !important;
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    .resize{
+        height: 40vh;
+        width: 100vw;
+        
+    }
+    .descCitt{
+        display: none;
+    }
+    .nomeCitt{
+        display:block;
+    }
+}
+@media only screen and (max-width: 980px) {
     .resize{
         height: 50vh;
-        width: 90vw;
+        width: 80vw;
     }
     .descCitt{
         display: none;
