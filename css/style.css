@@ -67,7 +67,7 @@
 
 .btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
 
-h2, h4 {text-shadow: -1px 0 blue, 0 1px black, 1px 0 black, 0 -1px black;color: var(--giallo) ;} /*fine stile bottoni*/
+h2, h4 {text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1px 1px 0  #093E77;color: var(--giallo) ;} /*fine stile bottoni*/
 
 .search-container {
   display: flex;
