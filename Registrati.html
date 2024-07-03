@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleRegistrati.css">
+    <link rel="stylesheet" href="css/styleAccedi.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
     <title>Registrati</title>
@@ -57,9 +57,71 @@
     </nav>
     <!--fine nav-->
     
-
-
-   
+    <!--REGISTRATI-->
+    <div class="container login-container">
+      <div class="row">
+    <!--Registrazione Utente-->
+          <div class="col-md-6 login-form-1" style="background-image: url(media/Sabbia.png);">
+              <h3 style="font-size: 40px;">Signin Utente</h3>
+              <h3 class="p-4"style="font: size 25px;;">Compila i seguenti campi:</h3>
+              <form>
+                  <div class="form-group">
+                  <input type="text" class="form-control mb-1" required placeholder="Nome*" value="" />
+                  </div>
+                  <div class="form-group">
+                  <input type="text" class="form-control mb-1" required placeholder="Cognome*" value="" />
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control mb-1" required placeholder="Email*" value="" />
+                  </div>
+                  <div class="form-group">
+                      <input type="password" class="form-control mb-1" required placeholder="Password*" value="" />
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="privacy" required>
+                    <label class="form-check-label" for="privacy">Ho letto e accettato la privacy policy</label>
+                </div>
+                  <div class="form-group">
+                      <input type="submit" class="btnSubmit" value="Login" />
+                  </div>
+                  <div class="form-group">
+                      <a href="#" class="ForgetPwd" style="text-decoration: underline;">Password dimenticata?</a> <br>
+                      <a href="Accedi.html" class="ForgetPwd" style="text-decoration: underline;">Sei già registrato?</a>
+                  </div>
+              </form>
+          </div>
+    <!--Registrazione Agenzia-->
+          <div class="col-md-6 login-form-2" style="background-image: url(media/Mare.png);">
+            <h3 style="font-size: 40px;">Signin Agenzia</h3>
+            <h3 class="p-4"style="font: size 25px;;">Compila i seguenti campi:</h3>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control mb-1" required placeholder="Impresa*" value="" />
+                  </div>
+                  <div class="form-group">
+                  <input type="text" class="form-control mb-1" required placeholder="PartitaIVA*" value="" />
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control mb-1" required placeholder="Email*" value="" />
+                  </div>
+                  <div class="form-group">
+                      <input type="password" class="form-control mb-1" required placeholder="Password*" value="" />
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="privacy2" required>
+                    <label class="form-check-label" for="privacy2">Ho letto e accettato la privacy policy</label>
+                </div>
+                  <div class="form-group">
+                      <input type="submit" class="btnSubmit" value="Login" />
+                  </div>
+                  <div class="form-group">
+                      <a href="#" class="ForgetPwd" value="Login" style="text-decoration: underline;">Password dimenticata?</a> <br>
+                      <a href="Accedi.html" class="ForgetPwd" style="text-decoration: underline;">Sei già registrato?</a>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 
 
 
@@ -67,7 +129,7 @@
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     
 <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top" style="background-color:rgb(16%, 50%, 73%)">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4" style="background-color:rgb(16%, 50%, 73%)">
         <div class="me-5 d-none d-lg-block">
           <span>Connettiti con noi tramite i nostri social networks:</span>
         </div>
