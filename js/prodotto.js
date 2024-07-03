@@ -44,7 +44,6 @@ destinazioni.forEach(prodotto => {
     //immagine 2
     const img2 = document.getElementById("img2");
     const prodottoImg2 = document.createElement("img");
-    prodottoImg2.classList.add("img2");
     prodottoImg2.classList.add("img-fluid");
     prodottoImg2.src = prodotto.image2;
     prodottoImg2.alt = prodotto.nome;
@@ -52,7 +51,6 @@ destinazioni.forEach(prodotto => {
     //immagine 3
     const img3 = document.getElementById("img3");
     const prodottoImg3 = document.createElement("img");
-    prodottoImg3.classList.add("img2");
     prodottoImg3.classList.add("img-fluid");
     prodottoImg3.src = prodotto.image3;
     prodottoImg3.alt = prodotto.nome;

@@ -73,9 +73,10 @@ h2, h4 {text-shadow: -1px 0 blue, 0 1px black, 1px 0 black, 0 -1px black;color: 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; 
 }
-
+#btnsearch:hover{
+  color: var(--giallo) !important;
+}
 .search-bar {
   width: 50%; 
   padding: 10px;
@@ -88,3 +89,13 @@ h2, h4 {text-shadow: -1px 0 blue, 0 1px black, 1px 0 black, 0 -1px black;color: 
 .search-bar:focus {outline: none;border-color: #28a745;}
 
 /*fine style carosello/searchbar*/
+
+
+
+@media only screen and (max-width: 767px) {
+
+  #searchCon{
+    width: 75% !important;
+    margin-right: 13rem;
+  }
+  }
