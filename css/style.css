@@ -48,3 +48,43 @@
 .cambioCol:hover{
   color: var(--giallo) !important;
 }
+
+/* style per la searchbar e il carosello*/
+.btn {
+  background-color: var(--blu-chiaro); 
+  color: var(--giallo) ; 
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #ffffff; 
+ }
+
+.btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
+
+h2, h4 {text-shadow: -1px 0 blue, 0 1px black, 1px 0 black, 0 -1px black;color: var(--giallo) ;} /*fine stile bottoni*/
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; 
+}
+
+.search-bar {
+  width: 50%; 
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px; 
+  position: absolute;
+}
+
+.search-bar:focus {outline: none;border-color: #28a745;}
+
+/*fine style carosello/searchbar*/

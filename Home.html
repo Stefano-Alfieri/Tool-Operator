@@ -11,64 +11,113 @@
 </head>
 
 <body>
-    <!--inizio navbar-->
-    <nav class="navbar navbar-expand-lg backBluChiaro">
-        <div class="container">
-            <img src="media/Logo.png" class="logo" alt="Logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white el-nav" aria-current="page" href="Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Offerte.html">Offerte</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Preventivo.html">Crea Il Tuo Preventivo</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto me-5">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white el-nav" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu backBlu">
-                            <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </ul>
-            </div>
+  
+
+     <!--inizio navbar-->
+     <nav class="navbar navbar-expand-lg backBluChiaro">
+      <div class="container">
+          <img src="media/Logo.png" class="logo" alt="Logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active text-white el-nav" aria-current="page" href="Home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white el-nav" href="Offerte.html">Offerte</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white el-nav" href="Preventivo.html">Crea Il Tuo Preventivo</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav ml-auto me-5">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle text-white el-nav" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menu backBlu">
+                          <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div class="search-container" style="background-color: rgb(98%, 69%, 2%);">
+    <input type="text" class="form-control" placeholder="Regione - Provincia - Città - CAP - Cosa cerchi?">
+    <button type="submit" class="btn btn-primary">Cerca</button>
+</div>
+<!--fine searchbar-->
+
+  
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <h2 class="p-2">PREVENTIVI</h2>
+          <h4>Vuoi sapere quanto spenderai senza soprese? <br> Sei nel posto giusto!</h4>
+          <a href="Preventivo.html" class="btn  role button">SCOPRI DI PIU'</a>   <!--LINK MANCANTE-->
         </div>
-    </nav>
-    <!--fine nav-->
-    
+      </div>
+      <div class="carousel-item c-item">
+        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <h2 class="p-2">OFFERTE</h2>
+            <h4>Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
+          <a href="Offerte.html" class="btn  role button">SCOPRI DI PIU'</a>            <!--LINK MANCANTE-->
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="media/Paesaggio.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <h2 class="p-2">DESTINAZIONI</h2>
+          <h4>Scegli tra le nostre proposte extracontinentali e non...</h4>
+          <a href="Destinazioni.html" class="btn  role button">SCOPRI DI PIU'</a>       <!--LINK MANCANTE-->
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!--FINE CAROSELLLO-->
 
 
    
-
-
 
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     
 <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top" style="background-color:rgb(16%, 50%, 73%)">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4" style="background-color:rgb(16%, 50%, 73%)">
         <div class="me-5 d-none d-lg-block">
-          <span>Connettiti con noi tramite i nostri social networks:</span>
+          <span style="color: white">Connettiti con noi tramite i nostri social networks:</span>
         </div>
   
         <div>
@@ -93,7 +142,7 @@
               </i>CoolTraveler
             </h6>
             <i class="fas fa-gem me-3" style="color: white"></i>
-            <p>
+            <p style="color: white">
              Non ci sono tesori più preziosi dei ricordi di un viaggio. Rendi i tuoi tour indimenticabili prenotando tramite la nostra piattaforma per ottenere a prezzi accessibili esperienze da sogno .
             </p>
           </div>
@@ -102,16 +151,16 @@
             <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(98%, 69%, 2%)">
               Link Utili
             </h6>
-            <p>
+            <p style="color: white">
               <a href="Home.html" class="text-reset">Home</a>
             </p>
-            <p>
+            <p style="color: white">
               <a href="Destinazioni.html" class="text-reset">Destinazioni</a>
             </p>
-            <p>
+            <p style="color: white">
               <a href="Offerte.html" class="text-reset">Offerte</a>
             </p>
-            <p>
+            <p style="color: white">
               <a href="Preventivo.html" class="text-reset">Crea il Tuo Preventivo</a>
             </p>
           </div>
@@ -119,13 +168,13 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
      
             <h6 class="text-uppercase fw-bold mb-4"style="color: rgb(98%, 69%, 2%)">Contatti</h6>
-            <p><i class="fas fa-home me-3" style="color: white"></i> Mondello, PA 90151, IT</p>
-            <p>
+            <p style="color: white"><i class="fas fa-home me-3" style="color: white"></i> Mondello, PA 90151, IT</p>
+            <p style="color: white">
               <i class="fas fa-envelope me-3" style="color: white"></i>
               coolTraveler@gmail.com
             </p>
-            <p><i class="fas fa-phone me-3" style="color: white"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3" style="color: white"></i> + 01 234 567 89</p>
+            <p style="color: white"><i class="fas fa-phone me-3"  style="color: white"></i> + 01 234 567 88</p>
+            <p style="color: white"><i class="fas fa-print me-3" style="color: white"></i> + 01 234 567 89</p>
           </div>
         </div>
       </div>
@@ -133,7 +182,7 @@
 
 <!-- Copyright -->
     <div class="text-center p-4" style="background-color:rgb(98%, 69%, 2%);">
-      © 2024 Copyright: <a class="text-reset fw-bold" href="">CoolTraveler.com</a>
+     <a class="text-reset fw-bold" href=""> © 2024 Copyright: CoolTraveler.com</a>
     </div>
   </footer>
 
