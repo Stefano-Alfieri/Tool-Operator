@@ -9,6 +9,44 @@
     <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
+<style>
+   .btn {
+    background-color: var(--blu-chiaro); 
+    color: var(--giallo) ; 
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #ffffff; 
+   }
+
+.btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
+
+ h2, h4 {text-shadow: -1px 0 blue, 0 1px black, 1px 0 black, 0 -1px black;color: var(--giallo) ;} /*fine stile bottoni*/
+
+ .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; 
+}
+
+.search-bar {
+    width: 50%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px; 
+    position: absolute;
+}
+
+.search-bar:focus {outline: none;border-color: #28a745;}
+</style>
 
 <body>
     <!--inizio navbar-->
@@ -55,9 +93,57 @@
         </div>
     </nav>
     <!--fine nav-->
+
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Cerca destinazioni, offerte"><iclass="fa fa-search"></i>
+  </div>
+  <!--fine searchbar-->
+
     
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="media/img1.jpg" class="d-block w-100 c-img" alt="...">
+          <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+            <h2 class="p-2">DESTINAZIONE</h2>
+            <h4>Tanto lo sappiamo cosa ci vai a fare in Thailandia</h4>
+            <a href="" class="btn  role button">SCOPRI DI PIU'</a>   <!--LINK MANCANTE-->
 
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="media/img2.jpg" class="d-block w-100 c-img" alt="...">
+          <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+            <h2 class="p-2">PREVENTIVI</h2>
+              <h4>Tanto lo sappiamo cosa ci vai a fare in Thailandia</h4>
+            <a href="" class="btn  role button">SCOPRI DI PIU'</a>            <!--LINK MANCANTE-->
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="media/img3.jpg" class="d-block w-100c-img" alt="...">
+          <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+            <h2 class="p-2">OFFERTE</h2>
+            <h4>Tanto lo sappiamo cosa ci vai a fare in Thailandia</h4>
+            <a href="" class="btn  role button">SCOPRI DI PIU'</a>       <!--LINK MANCANTE-->
 
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+<!--FINE CAROSELLLO-->
    
 
 
