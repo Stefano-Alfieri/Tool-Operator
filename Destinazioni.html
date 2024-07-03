@@ -2,92 +2,297 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleDestinazioni.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
-    <title>Destinazioni</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleDestinazioni.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
+  <title>Destinazioni</title>
 </head>
 
 <body>
-    <!--inizio navbar-->
-    <nav class="navbar navbar-expand-lg backBluChiaro">
-        <div class="container">
-            <img src="media/Logo.png" class="logo" alt="Logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white el-nav" aria-current="page" href="Home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Offerte.html">Offerte</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white el-nav" href="Preventivo.html">Crea Il Tuo Preventivo</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto me-5">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white el-nav" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </a>
-                        <ul class="dropdown-menu backBlu">
-                            <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--fine nav-->
-    
+  <!--inizio navbar-->
+  <nav class="navbar navbar-expand-lg backBluChiaro">
+    <div class="container">
+      <img src="media/Logo.png" class="logo" alt="Logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white el-nav" aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white el-nav" href="Offerte.html">Offerte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white el-nav" href="Preventivo.html">Crea Il Tuo Preventivo</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto me-5">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white el-nav" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-menu backBlu">
+              <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
+            </ul>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--fine nav-->
+
+  <!--inizio body-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 ">
+        <h1 class="text-center giallo mb-5"> DESTINAZIONI</h1>
+      </div>
+      <ul class="mb-5">
+        <li class=" dropdown continente">
+          <button class=" dropdown-toggle el-nav btnContinente" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Scegli continente
+          </button>
+          <ul class="dropdown-menu backBlu">
+            <li>
+              <p class="dropdown-item text-white cambioCol" onclick="filtra('tutti')">Tutti</p>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <p class="dropdown-item text-white cambioCol" onclick="filtra('Europa')">Europa</p>
+            </li>
+            <li>
+              <p class="dropdown-item text-white cambioCol" onclick="filtra('Asia')">Asia</p>
+            </li>
+            <li>
+              <p class="dropdown-item text-white cambioCol" onclick="filtra('America')">America</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!--mete europee-->
+      <div class="col-lg-6  mb-5 dest" data-tipo="Europa">
+        <h2>ROMA</h2>
+        <p class="descCitt">
+          È definita Caput mundi, Città eterna e, per antonomasia, l'Urbe. Cuore della cristianità cattolica, è l'unica
+          città al mondo a ospitare al proprio interno un intero Stato, l'enclave della Città del Vaticano, cui si
+          aggiunge la sede del Sovrano Militare Ordine di Malta, persona giuridica di diritto internazionale.
+        </p>
+      </div>
+      <div class="col-lg-6  mb-5 dest" data-tipo="Europa">
+        <img class="resize" src="media/Roma.jpg" alt="Roma">
+      </div>
+      <div class="col-sm-12 dest"data-tipo="Europa">
+          <h2 class="nomeCitt mb-5">VIENNA</h2>
+      </div>
+      <div class="col-lg-6  mb-5 dest" data-tipo="Europa">
+        <img class="resize" src="media/vienna.jpg" alt="Vienna">
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Europa">
+        <h2 class="descCitt">VIENNA</h2>
+        <p class="descCitt">
+          Città imperiale, patria della Secessione e della psicanalisi, Vienna offre ai suoi visitatori complessi
+          museali, palazzi storici, giardini fioriti e un ricco calendario d'eventi. Con il Prater, i molti caffè, i
+          locali di tendenza, l'isola del Danubio, la capitale fa godere momenti di cultura, svago, relax.
+        </p>
+      </div>
+      <div class="col-lg-6  mb-5 dest" data-tipo="Europa">
+        <h2>CATANZARO</h2>
+        <p class="descCitt">
+          Storico capoluogo della Calabria Ultra per oltre due secoli, Catanzaro è sede dell'università "Magna
+          Græcia". Alle sue porte sorgeva Skylletion, antica città della Magna Grecia poi trasformata in colonia romana.
+
+          La città si erge nell'omonimo istmo di Catanzaro, che costituisce la sezione geografica più stretta della
+          penisola italiana: solo 35 km, infatti, separano in quel punto il mar Ionio dal Tirreno. Questo luogo è
+          all'origine del termine Italia, con cui gli antichi greci identificavano il territorio che, secondo la
+          mitologia, era un tempo governato da Re Italo, come riportato da Antioco di Siracusa, Aristotele, Virgilio
+          e Strabone.
+
+          L'odierna città, posta su un'altura (detta Trivonà dal greco tría vouná, cioè "tre colli") a dominio del golfo
+          di Squillace, sorse in epoca greco-bizantina, quando gli esuli di Scolacium si rifugiarono sui colli per
+          sfuggire alle razzie dei saraceni. Queste genti, di lingua greca, fondarono il più antico quartiere del centro
+          storico: la Grecìa. Alle origini bizantine si deve l'introduzione in città dell'arte della seta.
+        </p>
+      </div>
+      <div class="col-lg-6  mb-5 dest" data-tipo="Europa">
+        <img class="resize" src="media/catanzaro.jpg" alt="Catanzaro">
+      </div>
+      <!--FINE METE EUROPEE-->
+      <!--METE ASIATICHE-->
+      <div class="col-sm-12 dest"data-tipo="Asia">
+        <h2 class="nomeCitt mb-5">HONG KONG</h2>
+    </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <img class="resize" src="media/Hong-kongwebp.webp" alt="Hogn-Kong">
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <h2 class="descCitt">HONG-KONG</h2>
+        <p class="descCitt">
+          Hong Kong (pr. cantonese cinese [hœːŋ˥.kɔːŋ˧˥], jyutping:hoeng1 gong2, pr. italiana /oŋˈkɔnɡ/; in mandarino
+          香港T, 香港S, XiānggǎngP, lett. "porto profumato") è una ex colonia britannica ed attualmente una regione
+          amministrativa speciale della Repubblica Popolare Cinese. Situata sulla costa meridionale della Cina tra il
+          delta del fiume delle Perle e il Mar Cinese Meridionale,[5] la città è famosa per il suo imponente profilo
+          urbanistico e per il profondo porto naturale. Con una superficie di 2 754 km2 e una popolazione di oltre sette
+          milioni di persone, Hong Kong è una delle aree più densamente popolate del mondo. Il 95% della popolazione
+          di Hong Kong è di etnia cinese, mentre il restante 5% appartiene ad altri gruppi.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <h2>NUOVA DEHLI</h2>
+        <p class="descCitt">
+          Nuova Delhi (in hindī नई दिल्ली, Naī Dillī; in urdu نئی دلی; in punjabi ਨਵੀਂ ਦਿੱਲੀ; in inglese New Delhi) è
+          una città dell'India di 257 803 abitanti, oltre che distretto cittadino del territorio federato di Delhi[3]; è
+          la capitale nazionale. In base al numero di abitanti la città rientra nella classe I (da 100 000 persone in
+          su). La sede amministrativa distrettuale è situata nel quartiere di Connaught Place.
+
+          Nuova Delhi è compresa in un'area metropolitana (quella di Delhi), che è la seconda dell'India (21 753 487
+          abitanti in una stima del 2011), dopo Mumbai (Bombay).
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <img class="resize" src="media/nuova-delhi.webp" alt="nuova dehli">
+      </div>
+      <div class="col-sm-12 dest"data-tipo="Asia">
+        <h2 class="nomeCitt mb-5">TOKYO</h2>
+    </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <img class="resize" src="media/tokyo.avif" alt="Tokyo">
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="Asia">
+        <h2 class="descCitt">TOKYO</h2>
+        <p class="descCitt">
+          Tokyo (ˈtɔkjo/[3]; 東京, Tōkyō [toːkjoː], lett. "capitale orientale"), oppure Tokio, è la
+          capitale del Giappone, situata nella regione di Kantō sul lato sud-orientale dell'isola principale giapponese,
+          Honshū. Ospita, nel quartiere di Chiyoda, la sede del parlamento nazionale e del governo nazionale, e il
+          palazzo imperiale di Tokyo, mentre la sede del governo metropolitano è nel quartiere di Shinjuku.
+
+          In origine era un piccolo villaggio di pescatori il cui nome era Edo (江戸), che divenne un importante centro
+          politico del Giappone quando lo shōgun Tokugawa Ieyasu fece della città il suo quartier generale nel 1603.
+          Quando l'imperatore Meiji trasferì la sede imperiale nella città di Edo nel 1868 venne ribattezzata con il
+          nome di Tokyo, il cui significato è "capitale orientale" perché più a est rispetto alla precedente capitale,
+          la città di Kyōto.
+        </p>
+      </div>
+      <!--FINE METE ASIATICHE-->
+      <!--METE AMERICANE-->
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <h2>NEW YORK</h2>
+        <p class="descCitt">
+          New York , spesso chiamata New York City per
+          distinguerla dallo stato omonimo, e in italiano anche Nuova York, è una città degli Stati Uniti
+          d'America situata nello stato di New York. Conosciuta nel mondo anche come "Grande mela" (Big Apple),
+          sorge su un'area di circa 785 km² alla foce del fiume Hudson, sull'Oceano Atlantico, mentre l'area
+          metropolitana comprende anche aree situate nei due adiacenti stati del New Jersey e del Connecticut. Con circa
+          8 milioni di abitanti, che salgono a circa 25 milioni nell'area metropolitana, oltreché ad essere la città più
+          popolosa degli Stati Uniti, è anche la terza città più popolosa del Continente Americano, dopo San Paolo e
+          Città del Messico, oltreché ad essere l'undicesima città più popolosa del mondo. Viene riconosciuta inoltre
+          come città globale nella categoria Alfa, che la rende, insieme a Londra, la città più importante per
+          l'economia globale oltreché nazionale. Situata sulla baia di New York (New York Bay), in parte sul continente
+          e in parte su isole, è amministrativamente divisa in cinque distretti (borough): Manhattan, The Bronx, Queens,
+          Brooklyn e Staten Island.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <img class="resize" src="media/new-york.jpeg" alt="New York">
+      </div>
+      <div class="col-sm-12 dest"data-tipo="America">
+        <h2 class="nomeCitt mb-5">LOS ANGELES</h2>
+    </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <img class="resize" src="media/-Los-Angeles.webp" alt="Los Angeles">
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <h2 class="descCitt">LOS ANGELES</h2>
+        <p class="descCitt">
+          Los Angeles, spesso abbreviato in L.A., è una città degli Stati Uniti d'America, capoluogo
+          dell'omonima contea nello Stato della California. Con 4 041 707 abitanti nel 2020, oltreché ad essere la
+          città più grande della California, è anche la città più grande e più popolosa degli Stati Uniti occidentali e
+          la seconda città più popolosa del Paese dopo New York, oltreché ad essere una delle città più estese del
+          mondo. Fondata dagli spagnoli come El Pueblo de Nuestra Señora la Reina Virgen de los Ángeles del Río de la
+          Porciúncula de Asís, ovvero "Il villaggio di Nostra Signora la Regina Vergine degli Angeli del fiume
+          della Porziuncola d'Assisi", assurse allo status di città il 9 giugno 1850, cinque mesi prima che la
+          California diventasse il trentesimo Stato dell'Unione. Centro economico e scientifico di rilevanza
+          internazionale, è inoltre la capitale mondiale dell'industria cinematografica, in modo particolare uno dei
+          sobborghi più famosi della città, ovvero la celebre Hollywood. A Los Angeles e dintorni risiedono numerosi
+          personaggi del cinema e dello spettacolo statunitense e internazionale, oltre che per la rilevanza
+          internazionale della città, anche grazie alle lussuose località balneari limitrofe.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <h2>WASHINGTON D.C.</h2>
+        <p class="descCitt">
+          Washington D.C. formalmente Distretto di Columbia, nota anche
+          come Washington o D.C., è la capitale degli Stati Uniti d'America, con una popolazione di 709 265 abitanti
+          (5 582 170 abitanti nell'area metropolitana). Si trova sulla costa orientale degli Stati Uniti d'America a
+          circa 50 km dal mare, a sud dello stato del Maryland, a nord dello stato della Virginia e a 330 km circa a
+          sud-ovest di New York.
+
+          La città di Washington coincide territorialmente e politicamente con il Distretto di Columbia (in inglese:
+          District of Columbia, in sigla D.C., distretto federale previsto dalla Costituzione dell'Unione e formalizzato
+          dal District of Columbia Organic Act del 1801), di cui è parte integrante. Il distretto, in origine,
+          comprendeva le contee di Washington (donata dallo stato del Maryland) e Alexandria (donata dallo stato della
+          Virginia), in seguito a un referendum del 1846 quest'ultima è tornata allo stato della Virginia e ha cambiato
+          nome in Contea di Arlington.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 dest" data-tipo="America">
+        <img class="resize" src="media/washington.jpg" alt="Washington D.C.">
+      </div>
+      <!--FINE METE AMERICANE-->
 
 
-   
+      <!--fine row-->
+    </div>
+  </div>
 
 
 
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
-    
-<!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top" style="background-color:rgb(16%, 50%, 73%)">
-        <div class="me-5 d-none d-lg-block">
-          <span>Connettiti con noi tramite i nostri social networks:</span>
-        </div>
-  
-        <div>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f" style="color: white"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-google" style="color: white"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-instagram" style="color: white"></i>
-          </a>
-        </div>
+
+  <!--fine body-->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-top"
+      style="background-color:rgb(16%, 50%, 73%)">
+      <div class="me-5 d-none d-lg-block">
+        <span>Connettiti con noi tramite i nostri social networks:</span>
+      </div>
+
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f" style="color: white"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google" style="color: white"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram" style="color: white"></i>
+        </a>
+      </div>
     </section>
 
-<!-- Section: Descrizione (sinistra), Links (centro), Contatti (destra)-->
+    <!-- Section: Descrizione (sinistra), Links (centro), Contatti (destra)-->
     <section class="" style="background-color:rgb(16%, 50%, 73%)">
-      <div class="container text-center text-md-start p-3" >
+      <div class="container text-center text-md-start p-3">
         <div class="row mt-3">
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(98%, 69%, 2%)">
@@ -95,7 +300,8 @@
             </h6>
             <i class="fas fa-gem me-3" style="color: white"></i>
             <p>
-             Non ci sono tesori più preziosi dei ricordi di un viaggio. Rendi i tuoi tour indimenticabili prenotando tramite la nostra piattaforma per ottenere a prezzi accessibili esperienze da sogno .
+              Non ci sono tesori più preziosi dei ricordi di un viaggio. Rendi i tuoi tour indimenticabili prenotando
+              tramite la nostra piattaforma per ottenere a prezzi accessibili esperienze da sogno .
             </p>
           </div>
 
@@ -116,10 +322,10 @@
               <a href="Preventivo.html" class="text-reset">Crea il Tuo Preventivo</a>
             </p>
           </div>
-        
+
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-     
-            <h6 class="text-uppercase fw-bold mb-4"style="color: rgb(98%, 69%, 2%)">Contatti</h6>
+
+            <h6 class="text-uppercase fw-bold mb-4" style="color: rgb(98%, 69%, 2%)">Contatti</h6>
             <p><i class="fas fa-home me-3" style="color: white"></i> Mondello, PA 90151, IT</p>
             <p>
               <i class="fas fa-envelope me-3" style="color: white"></i>
@@ -132,12 +338,15 @@
       </div>
     </section>
 
-<!-- Copyright -->
+    <!-- Copyright -->
     <div class="text-center p-4" style="background-color:rgb(98%, 69%, 2%);">
       © 2024 Copyright: <a class="text-reset fw-bold" href="">CoolTraveler.com</a>
     </div>
   </footer>
 
+
+
+  <script src="js/destinazioni.js"></script>
   <!--js bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
