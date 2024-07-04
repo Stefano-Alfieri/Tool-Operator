@@ -1,30 +1,31 @@
+ .login-container{
+   margin-top: 0%;
+   margin-bottom: 0%;
+  }
 
-.login-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
   .login-form-1{
-    padding: 5%;
-    background:  rgb(98%, 69%, 2%);
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    padding: 10%;
+    background-color:rgba(168, 192, 208, 0.587);
+    box-shadow: 0px 0px 30px 0px #093E77;
   }
+
   .login-form-1 h3{
+    text-align: center;
+    color:  rgb(98%, 69%, 2%);
+    text-shadow: -1px -1px 0 #093E77, 1px -1px 0 #093E77, -1px 1px 0 #093E77, 1px 1px 0 #093E77;
+  }
+  .login-form-2{
+    padding: 10%;
+    background-color:rgba(198, 199, 164, 0.543);
+    box-shadow: 0px 0px 30px 0px #093E77;
+  }
+  .login-form-2 h3{
     text-align: center;
     color: rgb(16%, 50%, 73%);
     text-shadow: -1px -1px 0 #093E77, 1px -1px 0 #093E77, -1px 1px 0 #093E77, 1px 1px 0 #093E77;
   }
-  .login-form-2{
-    padding: 5%;
-    background: rgb(79, 170, 231);
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-  }
-  .login-form-2 h3{
-    text-align: center;
-    color: rgb(98%, 69%, 2%);
-    text-shadow: -1px -1px 0 #093E77, 1px -1px 0 #093E77, -1px 1px 0 #093E77, 1px 1px 0 #093E77;
-  }
   .login-container form{
-    padding: 10%;
+    padding: 8%;
   }
   .btnSubmit
   {
