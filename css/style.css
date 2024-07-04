@@ -85,7 +85,9 @@ h2, h4 {text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1p
   border-radius: 4px; 
   position: absolute;
 }
-
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 .search-bar:focus {outline: none;border-color: #28a745;}
 
 /*fine style carosello/searchbar*/
