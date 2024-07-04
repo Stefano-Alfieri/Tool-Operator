@@ -32,6 +32,9 @@
   .bluChiaro{
     color: var(--blu-chiaro) !important;
   }
+  .activeCourrent{
+    color: var(--giallo)!important;
+  }
   body{
     background-color: var(--sfondo);
   }
