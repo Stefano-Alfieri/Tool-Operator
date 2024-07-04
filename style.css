@@ -1,0 +1,106 @@
+:root {
+    --blu: #093E77;
+  }
+:root {
+    --sfondo: #dedede;
+  }
+:root {
+    --giallo: rgb(98%, 69%, 2%);
+  }
+  
+:root {
+    --blu-chiaro:rgb(16%, 50%, 73%) ;
+  }
+  h2, h1{
+    font-family:'Times New Roman', Times, serif
+}
+  .backBlu{
+      background-color: var(--blu) !important;
+  }
+  .blu{
+      color:var(--blu) !important;
+  }
+  .backGiallo{
+    background-color: var(--giallo) !important;
+  }
+  .giallo{
+    color: var(--giallo) !important;
+  }
+  .backBluChiaro{
+    background-color: var(--blu-chiaro) !important;
+  }
+  .bluChiaro{
+    color: var(--blu-chiaro) !important;
+  }
+  .activeCourrent{
+    color: var(--giallo)!important;
+  }
+  body{
+    background-color: var(--sfondo);
+  }
+  #bordoBott{
+    border-color:  var(--giallo);
+    background-color: var(--giallo);
+  }
+  .el-nav:hover{
+    color: var(--giallo) !important;
+  }
+.logo{
+    height: 10vh;
+}
+.cambioCol:hover{
+  color: var(--giallo) !important;
+}
+
+/* style per la searchbar e il carosello*/
+.btn {
+  background-color: var(--blu-chiaro); 
+  color: var(--giallo) ; 
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #ffffff; 
+ }
+
+.btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
+
+h2, h4 {text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1px 1px 0  #093E77;color: var(--giallo) ;} /*fine stile bottoni*/
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnsearch:hover{
+  color: var(--giallo) !important;
+}
+.search-bar {
+  width: 50%; 
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px; 
+  position: absolute;
+}
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.search-bar:focus {outline: none;border-color: #28a745;}
+
+/*fine style carosello/searchbar*/
+
+
+
+@media only screen and (max-width: 767px) {
+
+  #searchCon{
+    width: 75% !important;
+    margin-right: 13rem;
+  }
+  }
