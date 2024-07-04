@@ -11,10 +11,14 @@
 </head>
 
 <body>
+
  <style>
-   .testo{position: absolute;top: 75%;} /*SPOTASEMENTO TESTO VERSO IL BASSO*/
-  
-   .role {                          /*STILE BOTTONE SCOPRI DI PIU*/
+  /*SPOTASEMENTO TESTO VERSO IL BASSO*/
+  .testo{position: absolute;top: 75%;
+  } 
+
+  /*STILE BOTTONE SCOPRI DI PIU*/
+  .role {                     
     background-color: var(--blu-chiaro); 
     color: white ; 
     border-radius: 8px;
@@ -27,16 +31,15 @@
     transition-duration: 0.4s;
     cursor: pointer;
     border: 2px solid #ffffff; 
- }
- .role:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;} /*HOVER BOTTONE SCOPRIDIPUI*/
-
- h2, h4 {color:#093E77}
-
-
-
-  
+  }
+  /*HOVER BOTTONE SCOPRIDIPUI*/
+  .role:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;
+  } 
+  /*COLORE SCRITTE DEL CAROSELLO*/
+  .p-2 {color:#093E77; 
+    text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1px 1px 0  #093E77;
+  }
  </style>
-
 
   <!--inizio navbar-->
   <nav class="navbar navbar-expand-lg backBluChiaro">
@@ -80,48 +83,54 @@
       </div>
     </div>
   </nav>
+
 <!--INIZIO CAROSELLLO-->
  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active"
         aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active"
         aria-label="Slide 3"></button>
     </div>
+
     <div class="carousel-inner">
+
       <div class="carousel-item active c-item">
         <img src="media/Paesaggio.png" class="d-block w-100 c-img" alt="...">
         <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">DESTINAZIONI</h2>
-            <h4>Scopri i tuor esclusivi in Italia e nel mondo che CoolTraveler ha selezionato per te! </h4>
+            <h4 class="p-2">Scopri i tuor esclusivi in Italia e nel mondo che CoolTraveler ha selezionato per te! </h4>
             <a href="Destinazioni.html" class="btn role button ">SCOPRI DI PIU'</a> 
           </div>
         </div>
       </div>
-      <div class="carousel-item c-item">
+
+      <div class="carousel-item active c-item">
         <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
         <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">PREVENTIVI</h2>
-            <h4>Vuoi sapere quanto spenderai senza soprese? Sei nel posto giusto!</h4>
+            <h4 class="p-2">Vuoi sapere quanto spenderai senza soprese? Sei nel posto giusto!</h4>
             <a href="Preventivo.html" class="btn role button ">SCOPRI DI PIU'</a> 
           </div>
         </div>
       </div>
-      <div class="carousel-item c-item">
+
+      <div class="carousel-item active c-item">
         <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
         <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">OFFERTE</h2>
-          <h4>Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
+          <h4 class="p-2">Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
           <a href="Offerte.html" class="btn role button ">SCOPRI DI PIU'</a> 
           </div>
         </div>
       </div>
     </div>
+    
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -130,6 +139,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+    
   </div>
   <!--FINE CAROSELLLO-->
 
