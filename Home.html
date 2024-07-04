@@ -11,6 +11,31 @@
 </head>
 
 <body>
+ <style>
+   .testo{position: absolute;top: 75%;} /*SPOTASEMENTO TESTO VERSO IL BASSO*/
+  
+   .role {                          /*STILE BOTTONE SCOPRI DI PIU*/
+    background-color: var(--blu-chiaro); 
+    color: white ; 
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #ffffff; 
+ }
+ .role:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;} /*HOVER BOTTONE SCOPRIDIPUI*/
+
+ h2, h4 {color:#093E77}
+
+
+
+  
+ </style>
 
 
   <!--inizio navbar-->
@@ -24,7 +49,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link activeCourrent  el-nav" aria-current="page" href="Home.html">Home</a>
+            <a class="nav-link active text-white el-nav" aria-current="page" href="Home.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
@@ -55,6 +80,59 @@
       </div>
     </div>
   </nav>
+<!--INIZIO CAROSELLLO-->
+ <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="media/Paesaggio.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <div class="testo">
+          <h2 class="p-2">DESTINAZIONI</h2>
+            <h4>Scopri i tuor esclusivi in Italia e nel mondo che CoolTraveler ha selezionato per te! </h4>
+            <a href="Destinazioni.html" class="btn role button ">SCOPRI DI PIU'</a> 
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <div class="testo">
+          <h2 class="p-2">PREVENTIVI</h2>
+            <h4>Vuoi sapere quanto spenderai senza soprese? Sei nel posto giusto!</h4>
+            <a href="Preventivo.html" class="btn role button ">SCOPRI DI PIU'</a> 
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+          <div class="testo">
+          <h2 class="p-2">OFFERTE</h2>
+          <h4>Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
+          <a href="Offerte.html" class="btn role button ">SCOPRI DI PIU'</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--FINE CAROSELLLO-->
+
   <!--inizio searchbar-->
   <div class="container-fluid backBlu">
     <div class="container w-50" id="searchCon">
@@ -70,59 +148,6 @@
   </div>
 
   <!--fine searchbar-->
-
-
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active c-item">
-        <img src="media/Paesaggio.png" class="d-block w-100 c-img" alt="...">
-        <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
-          <a href="Destinazioni.html" class="text-decoration-none text-white">
-            <h2 class="p-2">DESTINAZIONI</h2>
-            <h4>Scopri i tuor esclusivi in Italia e nel mondo che CoolTraveler ha selezionato per te! </h4>
-          </a>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
-        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
-          <a href="Preventivo.html" class="text-decoration-none text-white">
-            <h2 class="p-2">PREVENTIVI</h2>
-            <h4>Vuoi sapere quanto spenderai senza soprese? Sei nel posto giusto!</h4>
-          </a>
-        </div>
-      </div>
-      <div class="carousel-item c-item">
-        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
-        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
-          <a href="Offerte.html" class="text-decoration-none text-white">
-          <h2 class="p-2">OFFERTE</h2>
-          <h4>Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
-          </a>
-
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <!--FINE CAROSELLLO-->
-
-
 
 
   <!-- Footer -->
@@ -193,7 +218,6 @@
     </div>
   </footer>
 
-  
   <!--js bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
   
