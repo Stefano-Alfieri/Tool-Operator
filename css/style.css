@@ -11,7 +11,7 @@
 :root {
     --blu-chiaro:rgb(16%, 50%, 73%) ;
   }
-  h2, h1{
+  h2, h1,h3{
     font-family:'Times New Roman', Times, serif
 }
   .backBlu{

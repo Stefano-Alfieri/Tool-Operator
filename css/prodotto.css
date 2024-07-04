@@ -28,7 +28,12 @@ h2, h1{
 
     --bs-gutter-x: 0px;
 }
-
+#btnIt{
+    color: white!important;
+}
+#btnIt:hover{
+    color: var(--giallo)!important;
+}
 @media only screen and (max-width: 767px) {
     .descCitt{
         display: none;
