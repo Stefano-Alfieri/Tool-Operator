@@ -16,14 +16,13 @@ body {
 	-ms-align-items: center;
 	-moz-align-items: center;
 	-webkit-align-items: center;
-	background: var(--sfondo);
 	flex-direction: column;
 	-o-flex-direction: column;
 	-ms-flex-direction: column;
 	-moz-flex-direction: column;
 	-webkit-flex-direction: column;
 }
-.wizard-heading {
+.heading {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -31,8 +30,8 @@ body {
     padding-top: 85px;
     padding-bottom: 55px;
 }
-.row   {
-
+ /* SENZA QUESTA CLASSE IL FOOTER NON VIENE SMINCHIATO E IL CONTENITORE DEL PREVENTIVOMETRO RIMANE GUARDABILE ANCHE SE MENO CURATO.
+ .row   { 
 	width: 910px;
 	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -51,7 +50,8 @@ body {
 	position: relative;
 	display: flex;
 	display: -webkit-flex;
-}
+} */
+ 
 .row .prevForm {
 	width: 100%;
 	background: var(--blu);
@@ -279,7 +279,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
    color: #fff;
 }
 .inner .form-row .form-holder select {
-    background: #fff url('../images/wizard_v6_icon.png') no-repeat scroll;
+    background: #fff url() no-repeat scroll;
     background-position: right 16px center;
     z-index: 1;
     cursor: pointer;
@@ -426,7 +426,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 
 /* Responsive */
 @media screen and (max-width: 991px) {
-	.wizard-v6-content {
+	.v6-content {
 		width: 90%;
 	}
 	.form-register .steps li a .title {
