@@ -86,7 +86,7 @@ h2, h4 {color: var(--blu) !important;
   align-items: center;
 }
 #btnsearch:hover{
-  color: var(--yellow) !important;
+  color: var(--giallo) !important;
 }
 .search-bar {
   width: 50%; 
@@ -111,3 +111,9 @@ p{
     margin-right: 13rem;
   }
   }
+  .btnDest:hover{
+    color: var(--giallo) !important;
+    }
+    .btnDest{
+        color:white !important;
+    }
