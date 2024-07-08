@@ -11,11 +11,8 @@
 :root {
     --blu-chiaro:rgb(16%, 50%, 73%) ;
   }
-  h2, h1,h3{
+  h3, h2, h1{
     font-family:'Times New Roman', Times, serif
-}
-.accordion-button:focus{
-  box-shadow:none !important;
 }
 .btnIti{
   color:white !important;
@@ -23,6 +20,7 @@
 .btnIti:hover{
   color: var(--giallo)!important;
 }
+
   .backBlu{
       background-color: var(--blu) !important;
   }
@@ -79,7 +77,8 @@
 
 .btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
 
-h2, h4 {text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1px 1px 0  #093E77;color: var(--giallo) ;} /*fine stile bottoni*/
+h2, h4 {color: var(--blu) !important;
+}
 
 .search-container {
   display: flex;
@@ -87,7 +86,7 @@ h2, h4 {text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1p
   align-items: center;
 }
 #btnsearch:hover{
-  color: var(--giallo) !important;
+  color: var(--yellow) !important;
 }
 .search-bar {
   width: 50%; 
@@ -103,7 +102,6 @@ p{
 .search-bar:focus {outline: none;border-color: #28a745;}
 
 /*fine style carosello/searchbar*/
-
 
 
 @media only screen and (max-width: 767px) {
