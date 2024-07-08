@@ -19,7 +19,7 @@ $(function(){
             var arrivo = $('#arrivo').val();
             var giorni = $('#nGiorni').val();
             var viaggiatori = $('#nViaggiatori').val();
-            var totale = preventivo();
+            //var totale = preventivo();
 
             $('#nome-val').text(nome);
             $('#partenza-val').text(partenza);
@@ -30,9 +30,9 @@ $(function(){
             return true;
         }
     });
-
 });
-preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
+
+/*preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
     this.minore=document.getElementById("min");
     let totale=0;
     this.partenza=document.getElementById("partenza")
@@ -68,8 +68,8 @@ preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
         totale=totale+900
     }else if(arrivo==="Sud America"){
         totale=totale+1000
-    }else if(arrivo==="Catanzaro"){
-        totale=totale+100000
+    }else if(arrivo==="Africa"){
+        totale=totale+1100
     }
     this.sistemazione=document.getElementById("sistemazione")
     if(sistemazione==="Ostello"){
@@ -89,4 +89,4 @@ preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
         totale=totale-((totale*10)/100);
     }
     return  totale;
-};
+}; */
