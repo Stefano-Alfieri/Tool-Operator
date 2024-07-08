@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylePreventivo.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/stylePreventivo.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/e2d1d32d09.js" crossorigin="anonymous"></script>
     <title>Preventivo</title>
@@ -59,9 +60,189 @@
     
     <!--inizio mbody-->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 text-center mb-5 mt-5">
-          <img class="img-fluid" src="media/SITO-IN-COSTRUZIONE.png" alt="">
+      <div class="row mt-5">
+        <div class="col-12 ">
+            <h1 class="text-center blu">CREA IL TUO PREVENTIVO</h1>
+        </div>
+        <div class="prevForm">
+              <form class="form-register" id="form-register" action="#" method="post">
+                <div id="form-total">
+                  <!-- SECTION 1 -->
+                    <h2>
+                      <p class="step-icon  backBluChiaro giallo"><span>1</span></p>
+                      <span class="step-text blu">Info Utente</span>
+                    </h2>
+                    <section>
+                        <div class="inner">
+                          <div class="form-heading">
+                            <h3>Informazioni Personali</h3>
+                            <span>1/3</span>
+                          </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <label class="form-row-inner">
+                        <input type="text" class="" id="first_name" name="first_name" required placeholder="Nome">
+
+                      </label>
+                    </div>
+                    <div class="form-holder">
+                      <label class="form-row-inner">
+                        <input type="text" class="" id="last_name" name="last_name" required placeholder="Cognome">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <label class="form-row-inner">
+                        <input type="text" class="" id="phone" name="phone" required placeholder="Numero di Telefono">
+                      </label>
+                    </div>
+                    <div class="form-holder">
+                      <label class="form-row-inner">
+                        <input type="text" name="your_email_1" id="your_email_1" class=""  required placeholder="E-Mail">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-row form-row-date">
+                    <div class="form-holder form-holder-2">
+                      <label for="date" class="special-label">Date di Nascita:</label>
+                      <input type="date" id="date">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label class="form-row-inner">
+                        <input type="text" class="" id="address" name="address" required placeholder="Indirizzo">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                    </section>
+              <!-- SECTION 2 -->
+                    <h2>
+                      <p class="step-icon backBluChiaro giallo"><span>2</span></p>
+                      <span class="step-text blu">Info Prenotazione</span>
+                    </h2>
+                    <section>
+                        <div class="inner">
+                          <div class="form-heading">
+                            <h3>Informazioni di Prenotazione</h3>
+                            <span>2/3</span>
+                          </div>
+                          <div class="form-images">
+                            <img src="..." alt="img">
+                          </div>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="partenza" class="special-label-1 text-white">Seleziona l'Aereoporto di Partenza </label>
+                      <select name="partenza" id="partenza" class="form-control">
+                        <option value="Roma" selected>Roma (+80)</option>
+                        <option value="Milano">Milano (+60)</option>
+                        <option value="Napoli">Napoli (+100)</option>
+                        <option value="Bari">Bari (+120)</option>
+                        <option value="Palermo">Palermo (+150)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                      <label for="arrivo" class="special-label-1 text-white">Seleziona l'Aereoporto di Arrivo </label>
+                      <select name="arrivo" id="arrivo" class="form-control">
+                        <option value="Francia" selected>Francia(+300)</option>
+                        <option value="Inghilterra">Inghilterra (+350)</option>
+                        <option value="Spagna">Spagna (+400)</option>
+                        <option value="Grecia">Grecia (+450)</option>
+                        <option value="Palermo">Germania (+500)</option>
+                        <option value="Oceania">Oceania (+600)</option>
+                        <option value="Usa">Stati Uniti (+700)</option>
+                        <option value="Asia">Asia (+800)</option>
+                        <option value="NordAmerica">Nord America (+900)</option>
+                        <option value="SudAmerica">Sud America (+1000)</option>
+                        <option value="Catanzaro">Catanzaro (+100000)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-holder">
+                      <label for="Sistemazione" class="special-label-1 text-white">Tipologia Sistemazione</label>
+                      <select name="sistemazione" id="sistemazione" class="form-control">
+                        <option value="Ostello" selected>Ostello (+50)</option>
+                        <option value="B&B" >B&B (+100)</option>
+                        <option value="Hotel" >Hotel (+200)</option>
+                        <option value="Resort" >Resort (+300)</option>
+                    </div>
+                    <div class="form-holder mt-5 ">
+                      <label class="form-row-inner">
+                        <input type="number" class="" id="nViaggiatori" name="nViaggiatori" required placeholder="Numero di Viaggiatori">
+                      </label>
+                      <div class="form-row">
+                        <div class="form-holder">
+                        <label for="minore" class="special-label-1 text-white">C'è un Minore di 18 Anni?</label>
+                          <select name="minore" id="minore" class="form-control">
+                            <option value="no" selected>No</option>
+                            <option value="si" >Si</option>
+                  
+                    <div class="form-holder mt-5">
+                      <label class="form-row-inner">
+                        <input type="number" class="" id="nGiorni" name="nGiorni" required placeholder="Numero Giorni">
+                      </label>
+                    </div>
+                    <div class="form-holder d-none">
+                      <label for="time" class="special-label-1 blu d-none">Time Open </label>
+                      <select name="time" id="time" class="form-control blu d-none">
+                      </select>
+                      <span class="select-btn">
+                        <i class="zmdi zmdi-chevron-down"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                    </section>
+                    <!-- SECTION 3 -->
+                    <h2>
+                      <p class="step-icon backBluChiaro  giallo"><span>3</span></p>
+                      <span class="step-text blu">Conferma</span>
+                    </h2>
+                    <section>
+                        <div class="inner">
+                          <div class="form-heading">
+                            <h3>Conferma Dettagli</h3>
+                            <span>3/3</span>
+                          </div>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tbody>
+                        <tr class="space-row">
+                          <th>Nome:</th>
+                          <td id="nome-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Aereoporto di Partenza:</th>
+                          <td id="partenza-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Aereoporto di Arrivo:</th>
+                          <td id="arrivo-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Giorni:</th>
+                          <td id="giorni-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Viaggiatori:</th>
+                          <td id="nViagg-val"></td>
+                        </tr>
+                        <tr class="space-row">
+                          <th>Prezzo:</th>
+                          <td id="prezzo-val"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                    </section>
+                </div>
+              </form>
         </div>
       </div>
     </div>
@@ -138,6 +319,11 @@
 
   <!--js bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.steps.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/preventivo.js"></script>
+
 
 </body>
 
