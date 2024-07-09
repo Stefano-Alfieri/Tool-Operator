@@ -1,4 +1,4 @@
-/*$(function(){
+$(function(){
     $("#form-total").steps({
         headerTag: "h2",
         bodyTag: "section",
@@ -13,7 +13,7 @@
             finish : 'Confirm',
             current : ''
         },
-/*        onStepChanging: function (event, currentIndex, newIndex) { 
+        onStepChanging: function (event, currentIndex, newIndex) { 
             var nome = $('#first_name').val() + ' ' + $('#last_name').val();
             var partenza = $('#partenza').val();
             var arrivo = $('#arrivo').val();
