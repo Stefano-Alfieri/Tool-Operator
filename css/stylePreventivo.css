@@ -409,13 +409,14 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     -ms-border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background: #43ccba;
+    background: var(--blu-chiaro);
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
 }
 .actions ul li:hover {
-	background: #32998b
+	background: var(--blu-chiaro);
+    color: var(--giallo);
 }
 .actions ul li a {
 	color: #fff;

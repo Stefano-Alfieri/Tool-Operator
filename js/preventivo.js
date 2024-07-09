@@ -8,9 +8,9 @@ $(function(){
         transitionEffectSpeed: 500,
         titleTemplate : '<div class="title">#title#</div>',
         labels: {
-            previous : 'Back',
-            next : 'Next',
-            finish : 'Confirm',
+            previous : 'Indietro',
+            next : 'Prossimo',
+            finish : 'Conferma',
             current : ''
         },
         onStepChanging: function (event, currentIndex, newIndex) { 
@@ -19,7 +19,7 @@ $(function(){
             var arrivo = $('#arrivo').val();
             var giorni = $('#nGiorni').val();
             var viaggiatori = $('#nViaggiatori').val();
-            //var totale = preventivo();
+            //totale = preventivo();
 
             $('#nome-val').text(nome);
             $('#partenza-val').text(partenza);
@@ -32,10 +32,13 @@ $(function(){
     });
 });
 
-/*preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
-    this.minore=document.getElementById("min");
+
+
+
+/*function preventivo (){
+    let minore=document.getElementById("min");
     let totale=0;
-    this.partenza=document.getElementById("partenza")
+    let partenza=document.getElementById("partenza")
     if(partenza==="Milano"){
         totale=totale+60
     }else if(partenza==="Roma"){
@@ -47,7 +50,7 @@ $(function(){
     }else if(partenza==="Palermo"){
         totale=totale+150
     }
-    this.destinazioni=document.getElementById("arrivo")
+    let destinazione=document.getElementById("arrivo")
     if(arrivo==="Francia"){
         totale=totale+300
     }else if(arrivo==="Inghilterra"){
@@ -71,7 +74,7 @@ $(function(){
     }else if(arrivo==="Africa"){
         totale=totale+1100
     }
-    this.sistemazione=document.getElementById("sistemazione")
+    let sistemazione=document.getElementById("sistemazione")
     if(sistemazione==="Ostello"){
         totale=totale+50
     }else if(sistemazione==="B&B"){
@@ -81,12 +84,14 @@ $(function(){
     }else if(sistemazione==="Resort"){
         totale=totale+300
     }
-    this.viaggiatore=document.getElementById("nViaggiatori")
+    let viaggiatore=document.getElementById("nViaggiatori")
     totale=totale*viaggiatore
-    this.giorni=document.getElementById("nGiorni")
+    let giorni=document.getElementById("nGiorni")
     totale=totale*giorni
     if(minore===si){
         totale=totale-((totale*10)/100);
     }
     return  totale;
-}; */
+    
+}; 
+*/
