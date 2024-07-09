@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
     $("#form-total").steps({
         headerTag: "h2",
         bodyTag: "section",
@@ -13,13 +13,13 @@ $(function(){
             finish : 'Confirm',
             current : ''
         },
-        onStepChanging: function (event, currentIndex, newIndex) { 
+/*        onStepChanging: function (event, currentIndex, newIndex) { 
             var nome = $('#first_name').val() + ' ' + $('#last_name').val();
             var partenza = $('#partenza').val();
             var arrivo = $('#arrivo').val();
             var giorni = $('#nGiorni').val();
             var viaggiatori = $('#nViaggiatori').val();
-            var totale = preventivo();
+            //var totale = preventivo();
 
             $('#nome-val').text(nome);
             $('#partenza-val').text(partenza);
@@ -32,7 +32,7 @@ $(function(){
     });
 
 });
-preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
+/*preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
     this.minore=document.getElementById("min");
     let totale=0;
     this.partenza=document.getElementById("partenza")
