@@ -30,8 +30,8 @@
             return true;
         }
     });
-
 });
+
 /*preventivo (minore,partenza,destinazione,sistemazione,viaggiatore,giorni);{
     this.minore=document.getElementById("min");
     let totale=0;
@@ -68,8 +68,8 @@
         totale=totale+900
     }else if(arrivo==="Sud America"){
         totale=totale+1000
-    }else if(arrivo==="Catanzaro"){
-        totale=totale+100000
+    }else if(arrivo==="Africa"){
+        totale=totale+1100
     }
     this.sistemazione=document.getElementById("sistemazione")
     if(sistemazione==="Ostello"){
@@ -89,4 +89,4 @@
         totale=totale-((totale*10)/100);
     }
     return  totale;
-};
+}; */
