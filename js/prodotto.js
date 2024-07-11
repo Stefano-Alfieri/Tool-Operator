@@ -92,3 +92,9 @@ function imgClickSeg(){
     const imgSeg=document.getElementById("seg")
     imgSeg.classList.remove("d-none")
 }
+function imgClickSeg2(){
+    const imgChi = document.getElementById("bimbo");
+    imgChi.classList.add("d-none");
+    const imgSeg=document.getElementById("troia")
+    imgSeg.classList.remove("d-none")
+}
