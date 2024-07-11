@@ -81,7 +81,6 @@ strong{
   border: 2px solid #ffffff; 
  }
 
-.btn:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;}
 
 h2, h4 {color: var(--blu) !important;
 }
