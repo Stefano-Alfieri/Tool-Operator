@@ -13,9 +13,6 @@
 <body>
 
  <style>
-  /*SPOTASEMENTO TESTO VERSO IL BASSO*/
-  .testo{position: absolute;top: 75%;
-  } 
 
   /*STILE BOTTONE SCOPRI DI PIU*/
   .role {                     
@@ -35,10 +32,24 @@
   /*HOVER BOTTONE SCOPRIDIPUI*/
   .role:hover {background-color: var(--giallo) ; color: #28a745;border: 2px solid #28a745;
   } 
+
+  /*SPOTASEMENTO TESTO VERSO IL BASSO*/
+  /*IL DIV CON CLASSE .testo è IL CONTENITORE DELLE SCRITTE DEL CAROSELLO*/
+
+  .testo{
+    position: absolute;
+    top: 40%;
+    background-color: #dedede6b;
+    width: 150%;
+    padding-left: 30%;
+    padding-right: 30%;
+  } 
+
   /*COLORE SCRITTE DEL CAROSELLO*/
-  .p-2 {color:#093E77; 
-    text-shadow: -1px -1px 0 #093E77, 1px -1px #093E77, 1px 0  #093E77 , -1px 1px 0  #093E77;
-  }
+  /*.p-2 {
+  
+  } */
+
  </style>
 
     <!--inizio navbar-->
@@ -68,8 +79,8 @@
                     <a class="nav-link text-white el-nav" href="Contatti.html">Contattaci</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white el-nav" href="ChiSiamo.html">Chi Siamo?</a>
-                </li>
+                  <a class="nav-link text-white el-nav" href="ChiSiamo.html">Chi siamo</a>
+              </li>
               </ul>
               <ul class="navbar-nav ml-auto me-5">
                   <li class="nav-item dropdown">
@@ -106,7 +117,7 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active c-item">
-        <img src="media/Paesaggio.png" class="d-block w-100 c-img" alt="...">
+        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
         <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">DESTINAZIONI</h2>
@@ -117,8 +128,8 @@
       </div>
 
       <div class="carousel-item active c-item">
-        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
-        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">PREVENTIVI</h2>
             <h4 class="p-2">Vuoi sapere quanto spenderai senza soprese? Sei nel posto giusto!</h4>
@@ -128,8 +139,8 @@
       </div>
 
       <div class="carousel-item active c-item">
-        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
-        <div class="carousel-caption  d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
+        <img src="media/Piedi.png" class="d-block w-100 c-img" alt="...">
+        <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">OFFERTE</h2>
           <h4 class="p-2">Prenota approfittando della scontisca che ti abbiamo riservato!</h4>
@@ -204,6 +215,9 @@
             </p>
             <p style="color: white">
               <a href="Contatti.html" class="text-reset">Contattaci</a>
+            </p>
+            <p style="color: white">
+              <a href="ChiSiamo.html" class="text-reset">Chi siamo</a>
             </p>
 
           </div>
