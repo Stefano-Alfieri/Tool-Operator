@@ -80,7 +80,16 @@ strong{
   cursor: pointer;
   border: 2px solid #ffffff; 
  }
-
+.accImg{
+  height: 30vh;
+  width: 50vw;
+}
+#imgRim:focus{
+  background-image: url(media/RomaIti7.jpg);
+}
+#imgRim2:hover{
+  display: block;
+}
 
 h2, h4 {color: var(--blu) !important;
 }
