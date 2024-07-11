@@ -14,6 +14,9 @@
   h3, h2, h1{
     font-family:'Times New Roman', Times, serif
 }
+strong{
+  color: var(--giallo);
+}
 .btnIti{
   color:white !important;
 }
