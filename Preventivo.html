@@ -155,7 +155,7 @@
                 <option value="Asia">Asia (+800)</option>
                 <option value="NordAmerica">Nord America (+900)</option>
                 <option value="SudAmerica">Sud America (+1000)</option>
-                <option value="Catanzaro">Africa (+1100)</option>
+                <option value="Africa">Africa (+1100)</option>
               </select>
             </div>
           </div>
@@ -176,8 +176,8 @@
                 <div class="form-holder">
                 <label for="minore" class="special-label-1 text-white">C'è un Minore di 18 Anni?</label>
                   <select name="minore" id="minore" class="form-control">
-                    <option value="no" selected>No</option>
-                    <option value="si" >Si</option>
+                    <option value="No" selected>No</option>
+                    <option value="Si" >Si</option>
           
             <div class="form-holder mt-5">
               <label class="form-row-inner">
@@ -233,7 +233,9 @@
 
                         <tr class="space-row">
                           <th>Prezzo:</th>
-                          <td id="prezzo-val"></td>
+                          <td id="prezzo-val">
+                            <button type="button" class="btn backBluChiaro text-white" onclick="preventivo()" id="btnPrice">Clicca qui per scorire il prezzo</button>
+                          </td>
                         </tr>
 
                       </tbody>

@@ -13,32 +13,45 @@ $(function(){
             finish : 'Conferma',
             current : ''
         },
-        onStepChanging: function (event, currentIndex, newIndex) { 
+        onStepChanging: function () { 
             var nome = $('#first_name').val() + ' ' + $('#last_name').val();
-            var partenza = $('#partenza').val();
-            var arrivo = $('#arrivo').val();
-            var giorni = $('#nGiorni').val();
-            var viaggiatori = $('#nViaggiatori').val();
-            //totale = preventivo();
+            var aereoPartenza = $('#partenza').val();
+            var aereoArrivo = $('#arrivo').val();
+            var numeroGiorni = $('#nGiorni').val();
+            var numeroViaggiatori = $('#nViaggiatori').val();
 
             $('#nome-val').text(nome);
-            $('#partenza-val').text(partenza);
-            $('#arrivo-val').text(arrivo);
-            $('#giorni-val').text(giorni);
-            $('#nViagg-val').text(viaggiatori);
+            $('#partenza-val').text(aereoPartenza);
+            $('#arrivo-val').text(aereoArrivo);
+            $('#giorni-val').text(numeroGiorni);
+            $('#nViagg-val').text(numeroViaggiatori);
 
             return true;
         }
     });
 });
+let partenza = "";
+let arrivo = "";
+let sistemazione = "";
+let minore = "";
+let viaggiatori = 1;
+let giorni = 1;
+let totale = 0;
+
+function saveData(){
+     totale=0
+     partenza=document.getElementById("partenza").value;
+     arrivo=document.getElementById("arrivo").value;
+     sistemazione=document.getElementById("sistemazione").value;
+     minore=document.getElementById("minore").value;
+     viaggiatori=document.getElementById("nViaggiatori").value;
+     giorni=document.getElementById("nGiorni").value;
+    return totale;
+}
 
 
-
-
-/*function preventivo (){
-    let minore=document.getElementById("min");
-    let totale=0;
-    let partenza=document.getElementById("partenza")
+function preventivo (){
+    saveData();
     if(partenza==="Milano"){
         totale=totale+60
     }else if(partenza==="Roma"){
@@ -50,7 +63,6 @@ $(function(){
     }else if(partenza==="Palermo"){
         totale=totale+150
     }
-    let destinazione=document.getElementById("arrivo")
     if(arrivo==="Francia"){
         totale=totale+300
     }else if(arrivo==="Inghilterra"){
@@ -74,7 +86,6 @@ $(function(){
     }else if(arrivo==="Africa"){
         totale=totale+1100
     }
-    let sistemazione=document.getElementById("sistemazione")
     if(sistemazione==="Ostello"){
         totale=totale+50
     }else if(sistemazione==="B&B"){
@@ -84,14 +95,19 @@ $(function(){
     }else if(sistemazione==="Resort"){
         totale=totale+300
     }
-    let viaggiatore=document.getElementById("nViaggiatori")
-    totale=totale*viaggiatore
-    let giorni=document.getElementById("nGiorni")
-    totale=totale*giorni
-    if(minore===si){
+    if(viaggiatori==0){
+        viaggiatori=1
+    }
+    totale=totale*viaggiatori;
+    if(giorni==0){
+        giorni=1
+    }
+    totale=totale*giorni;
+    if(minore==="Si"){
         totale=totale-((totale*10)/100);
     }
+    document.getElementById('prezzo-val').textContent= totale + " €"
     return  totale;
     
 }; 
-*/
+
