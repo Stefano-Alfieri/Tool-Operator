@@ -17,6 +17,9 @@
 strong{
   color: var(--giallo);
 }
+.caroselloImg{
+  height: 100vh;
+}
 .btnIti{
   color:white !important;
 }
