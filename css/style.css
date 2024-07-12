@@ -101,6 +101,11 @@ h2, h4 {color: var(--blu) !important;
   border-radius: 4px; 
   position: absolute;
 }
+.back{
+  
+  background-color: var(--blu)!important;
+}
+
 p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
