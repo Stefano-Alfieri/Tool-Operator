@@ -39,7 +39,7 @@
   .testo{
     position: absolute;
     top: 40%;
-    background-color: #dedede6b;
+    background-color: #8e8976af;
     width: 150%;
     padding-left: 30%;
     padding-right: 30%;
@@ -50,6 +50,95 @@
   
   } */
 
+/*flipy*/
+
+.flipy {
+  -webkit-perspective: 800;
+   width: 100%;
+   height: 240px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+.flipy .card:hover {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.flipy .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flipy .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: Georgia;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+}
+.flipy .card .front {
+  position: absolute;
+  z-index: 1;
+    background: #f8f8f8;
+    color: white;
+    cursor: pointer;
+}
+.flipy .card .back {
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	background: blue;
+	background: #f8f8f8;
+	color: black;
+	cursor: pointer;
+}
+/*end flipy*/
+
+
+/* STILE PER LE COLONNE DI CARDS
+.card-columns{
+}*/
+
+.card {
+  border: none;
+}
+img,
+.card-img-top {
+  border-radius: 0em;
+}
+/* Responsive per le colonne di cards*/
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 5;
+  }
+}
+/*Fine stile colonne di cards*/
  </style>
 
     <!--inizio navbar-->
@@ -67,6 +156,9 @@
                       <a class="nav-link activeCourrent el-nav" aria-current="page" href="Home.html">Home</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link text-white el-nav" href="ChiSiamo.html">Chi siamo</a>
+                </li>
+                  <li class="nav-item">
                       <a class="nav-link text-white el-nav" href="Destinazioni.html">Destinazioni</a>
                   </li>
                   <li class="nav-item">
@@ -78,9 +170,6 @@
                   <li class="nav-item">
                     <a class="nav-link text-white el-nav" href="Contatti.html">Contattaci</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white el-nav" href="ChiSiamo.html">Chi siamo</a>
-              </li>
               </ul>
               <ul class="navbar-nav ml-auto me-5">
                   <li class="nav-item dropdown">
@@ -117,7 +206,7 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active c-item">
-        <img src="media/Figa2.png" class="d-block w-100 c-img" alt="...">
+        <img src="media/Figa2.png" class="d-block w-100 c-img caroselloImg" alt="...">
         <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">DESTINAZIONI</h2>
@@ -128,7 +217,7 @@
       </div>
 
       <div class="carousel-item active c-item">
-        <img src="media/Figa1.png" class="d-block w-100 c-img" alt="...">
+        <img src="media/Figa1.png" class="d-block w-100 c-img caroselloImg" alt="...">
         <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">PREVENTIVI</h2>
@@ -139,7 +228,7 @@
       </div>
 
       <div class="carousel-item active c-item">
-        <img src="media/Piedi.png" class="d-block w-100 c-img" alt="...">
+        <img src="media/Piedi.png" class="d-block w-100 c-img caroselloImg" alt="...">
         <div class="carousel-caption d-flex flex-column h-100 align-items-center justify-content-center bottom-0">
           <div class="testo">
           <h2 class="p-2">OFFERTE</h2>
@@ -177,8 +266,148 @@
   </div>
 
   <!--fine searchbar-->
+<!--card-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <h1 class="blu text-center">ALCUNI FRA I TOUR DISPONIBILI</h1>
+    </div>
+    <!--card1-->
+    <div class="col-sm-4 pt-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <!--card2-->
+    <div class="col-sm-4 pt-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <!--card3-->
+    <div class="col-sm-4 pt-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <!--card4-->
+    <div class="col-sm-4 pt-2 pb-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <!--card5-->
+    <div class="col-sm-4 pt-2 pb-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <!--card6-->
+    <div class="col-sm-4 pt-2 pb-5">
+      <div class="flipy">
+        <div class="card">
+          <div class="face front">
+            <img
+              src="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+          </div>
+          <div class="face back">
+            <img src="http://davidwalsh.name/demo/logo.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--flipy cards-->
+<!--Mosaico-->
+  <div class="col-12 ">
+    <h1 class="text-center blu mb-5 mt-3"> PIEDINI</h1>
+  </div>
+  <div class="container mt-3 mb-3">
+    <div class="card-columns">
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/14/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/2/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/3/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/4/500/300" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/5/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/6/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/7/600/500" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/3/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/5/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/8/600/500" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/20/200/450" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/10/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/11/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/12/200/400" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/5/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/21/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/18/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/14/640/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/15/400/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/16/300/300" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/17/300/300" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/18/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/19/300/400" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/20/400/300" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/5/400/480" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/15/400/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/1/640/200" alt="Card image cap"> </div>
+      <div class="card "> <img class="card-img-top" src="https://picsum.photos/id/19/300/400" alt="Card image cap"> </div>
+  
+    </div>
+  </div>
+
+<!--end "mosaico"-->
 
   <!-- Footer -->
+
+
   <footer class="text-center text-lg-start bg-body-tertiary text-muted">
 
 
@@ -205,6 +434,9 @@
               <a href="Home.html" class="text-reset">Home</a>
             </p>
             <p style="color: white">
+              <a href="ChiSiamo.html" class="text-reset">Chi siamo</a>
+            </p>
+            <p style="color: white">
               <a href="Destinazioni.html" class="text-reset">Destinazioni</a>
             </p>
             <p style="color: white">
@@ -219,7 +451,6 @@
             <p style="color: white">
               <a href="ChiSiamo.html" class="text-reset">Chi siamo</a>
             </p>
-
           </div>
 
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
