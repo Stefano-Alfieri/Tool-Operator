@@ -97,4 +97,4 @@ function imgClickSeg2(){
     imgChi.classList.add("d-none");
     const imgSeg=document.getElementById("troia")
     imgSeg.classList.remove("d-none")
-} 
+}

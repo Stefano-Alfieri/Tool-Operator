@@ -28,7 +28,7 @@ $(function(){
 
             return true;
         }
-    }); 
+    });  
 });
 let partenza = "";
 let arrivo = "";
