@@ -131,3 +131,57 @@ p{
     .btnDest{
         color:white !important;
     }
+
+   /*card*/
+
+	.flipy {
+  -webkit-perspective: 800;
+   width: 100%;
+   height: 240px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+.flipy .card:hover {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.flipy .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flipy .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: Georgia;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+}
+.flipy .card .front {
+  position: absolute;
+  z-index: 1;
+    background: #f8f8f8;
+    color: white;
+    cursor: pointer;
+}
+.flipy .card .back {
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	background: blue;
+	background: #f8f8f8;
+	color: black;
+	cursor: pointer;
+}
+
+/*promo*/
+
