@@ -211,7 +211,7 @@
            const prezzo = document.getElementById('prezzo');
 
            function fetchDestinazioni() {
-               fetch('http://localhost:8080//destinazioni')
+               fetch('http://localhost:8080/destinazioni')
                    .then(response => response.json())
                    .then(data => {
                        destinazioniTable.innerHTML = '';
