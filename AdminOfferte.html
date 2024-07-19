@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar With Bootstrap</title>
+    <title>CoolTraveler Admin</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -13,6 +13,75 @@
 </head>
 
 <body>
+    <style>
+        /* Titoli */
+        h1, h2 {
+            color: #093E77;
+            text-align: center;
+        }
+        
+        /* Stile della tabella */
+        #destinazioni-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        #destinazioni-table thead {
+            background-color: #093E77;
+            color: white;
+        }
+        
+        #destinazioni-table th, #destinazioni-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        #destinazioni-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Stile del form */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        form input[type="text"],
+        form input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        form button {
+            background-color: rgb(16%, 50%, 73%);
+            color: rgb(98%, 69%, 2%);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            background-color: #093e77bd;
+        }
+        </style>
+        <!--fineStyle-->
    <!--MENU-->
    <div class="wrapper">
     <aside id="sidebar">
@@ -110,7 +179,7 @@
         </ul>
 
         <div class="sidebar-footer">
-            <a href="#" class="sidebar-link">
+            <a href="Home.html" target="_blank" class="sidebar-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
                     <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
@@ -122,12 +191,10 @@
     
     <div class="main">
         <nav class="navbar navbar-expand px-4 py-3">
-            <form action="#" class="d-none d-sm-inline-block"></form>
-
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="c-img">
-                        <a href="Home.html" target="_blank" class="nav-icon pe-md-0">
+                        <a href="#" target="_blank" class="nav-icon pe-md-0">
                             <img src="media/Logo.png" class="image" alt="" style="height: 100%; width: 50%;">
                         </a>
                     </li>
@@ -135,16 +202,90 @@
             </div>
         </nav>
 <!--FINE MENU-->
-                <div class="container-fluid">
-                    <div class=" row mb-3">
-                        <div class="col-6">
-                            <h1 class="fw-bold fs-4 mb-3">Offerte</h1>
-                        </div>
-                       
+<!--style per le cards-->
+             <style>
+                .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+              }
+             </style>
+             <!--fine style per le cards-->
+<h1>Offerte</h1>
+<div class="container" id="row">
+        
+                            </div>
+                            <h2>Aggiungi/Modifica Promozione</h2>
+                            <form id="promozione-form">
+                                <input type="hidden" id="promozione-id">
+                                <label for="titoloPromo">Titolo:</label>
+                                <input type="text" id="titoloPromo" name="titoloPromo"><br>
+                                <label for="descrizionePromo">Descrizione:</label>
+                                <input type="text" id="descrizionePromo" name="descrizionePromo"><br>
+                                <label for="urlFoto">URL img:</label>
+                                <input type="text" id="urlFoto" name="urlFoto"><br>
+                                <button type="submit">Salva</button>
+                            </form>
+                    </div>
+                </div>  
+            </main>
 
-                            <div class="container-fluid" id="row">
-                                <!--parte dinamica-->
-                                <script>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-body-secondary">
+                        <div class="col-6 text-start ">
+                            <a class="text-body-secondary" href=" #">
+                                
+                            </a>
+                        </div>
+                        <div class="col-6 text-end text-body-secondary d-none d-md-block">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item">
+                                    <a class="text-body-secondary" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-body-secondary" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-body-secondary" href="#"><strong>CoolTraveler</strong></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js/scriptAdmin.js"></script>
+
+    <!--parte dinamica-->
+<script>
 
 document.addEventListener('DOMContentLoaded', function () {
 const container=document.getElementById("row");
@@ -229,53 +370,7 @@ function fetchPromozioni() {
 
 
             });
-                                </script>
-                            </div>
-                            <h2>Aggiungi/Modifica Promozione</h2>
-                            <form id="promozione-form">
-                                <input type="hidden" id="promozione-id">
-                                <label for="titoloPromo">Titolo:</label>
-                                <input type="text" id="titoloPromo" name="titoloPromo"><br>
-                                <label for="descrizionePromo">Descrizione:</label>
-                                <input type="text" id="descrizionePromo" name="descrizionePromo"><br>
-                                <label for="urlFoto">URL img:</label>
-                                <input type="text" id="urlFoto" name="urlFoto"><br>
-                                <button type="submit">Salva</button>
-                            </form>
-                    </div>
-                </div>  
-            </main>
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-body-secondary">
-                        <div class="col-6 text-start ">
-                            <a class="text-body-secondary" href=" #">
-                                
-                            </a>
-                        </div>
-                        <div class="col-6 text-end text-body-secondary d-none d-md-block">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item">
-                                    <a class="text-body-secondary" href="#"></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="text-body-secondary" href="#"></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="text-body-secondary" href="#"><strong>CoolTraveler</strong></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="js/scriptAdmin.js"></script>
+</script>
 </body>
 
 </html>
