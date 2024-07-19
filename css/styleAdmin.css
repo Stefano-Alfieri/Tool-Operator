@@ -22,6 +22,10 @@ body {
     display: flex;
 }
 
+.navbar .nav-icon img {
+    border-radius: 50%;
+}
+
 .main {
     display: flex;
     flex-direction: column;
