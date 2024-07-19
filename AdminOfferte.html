@@ -135,122 +135,110 @@
             </div>
         </nav>
 <!--FINE MENU-->
-
-            <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <h3 class="fw-bold fs-4 mb-3">Offerte</h3>
+                        <h1 class="fw-bold fs-4 mb-3">Offerte</h1>
 
-                            <div class="row">
+                            <div class="row" id="row">
+                                <!--parte dinamica-->
+                                <script>
 
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
+document.addEventListener('DOMContentLoaded', function () {
+const container=document.getElementById("row");
+const promozioneForm = document.getElementById('promozione-form');
+           const promozioneId = document.getElementById('promozione-id');
+           const titoloPromo = document.getElementById('titoloPromo');
+           const descrizionePromo = document.getElementById('descrizionePromo');
+           const urlFoto = document.getElementById('urlFoto');
+
+function fetchPromozioni() {
+    fetch('http://localhost:8080/promozioni')
+                   .then(response => response.json())
+                   .then(data => {
+                       container.innerHTML = '';
+                       data.forEach(promozione => {
+                           const row = document.createElement('div');
+                           row.innerHTML = `
+                            <div class="col-sm-12 col-md-6 col-lg-4">
                                     <div class="card" style="width: 18rem;">
+                                    <img src="${promozione.urlFoto}" class="card-img-top" alt="${promozione.titoloPromo}">
                                         <div class="card-body">
-                                          <h5 class="card-title">Promo Hotel</h5>
+                                          <h5 class="card-title">${promozione.titoloPromo}</h5>
                                           <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Pranzo incluso nel prezzo della prenotazione con alberghi aderenti.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
+                                          <p class="card-text">${promozione.descrizionePromo}</p>
+                                          <button onclick="editPromozione(${promozione.id})">Modifica</button>
+                                            <button onclick="deletePromozione(${promozione.id})">Elimina</button>
                                         </div>
                                       </div>
                                   </div>
+                           `;
+                           container.appendChild(row);
+                        });
+                    });
+                }
+                promozioneForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const id = promozioneId.value;
+                    const method = id ? 'PUT' : 'POST';
+                    const url = id ? `http://localhost:8080/promozioni/${id}` : 'http://localhost:8080/promozioni';
+                    const promozione = {
+                        titoloPromo: titoloPromo.value,
+                        descrizionePromo: descrizionePromo.value,
+                        urlFoto: urlFoto.value,
+                    };
+     
+                    fetch(url, {
+                        method: method,
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(promozione)
+                    }).then(() => {
+                        fetchPromozioni();
+                        promozioneForm.reset();
+                        promozioneId.value = '';
+                    });
+                });
+     
+                window.editPromozione = function (id) {
+                    fetch(`http://localhost:8080/promozioni/${id}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            promozioneId.value = data.id;
+                            titoloPromo.value = data.titoloPromo;
+                            descrizionePromo.value = data.descrizionePromo;
+                            urlFoto.value = data.urlFoto;
+                        });
+                };
+     
+                window.deletePromozione = function (id) {
+                    if (confirm('Sei sicuro di voler eliminare questa promozione?')) {
+                        fetch(`http://localhost:8080/promozioni/${id}`, {
+                            method: 'DELETE'
+                        }).then(() => {
+                            fetchPromozioni();
+                        });
+                    }
+                };
+     
 
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Bambino Gratis</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Famiglia con piu di 4 persone: un bimbo inferiore a 5 anni non paga.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
+                fetchPromozioni();
 
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Promo Fly</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Partendo da Palermo: sconto di 50€</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
 
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Italia Canc. Gratuita</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Prenotando per l'italia la cancellazione rimane gratuita entro 8 giorni dalla partenza.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
-
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">50€ di Sconto</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Se a prenotare sono 6 o più viene applicato uno sconto di 50€ sul totale.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
-
-                                   <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Promo Single</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Su prenotazioni singole vengono decurtati i costi supplementari sulla camera.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
-
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">20% per Coppie</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Coppie prenotanti dai 16 ai 25 anni: 20% di sconto sul totale.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
-
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Happy Weekend</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Prenotazioni riferite ai fine settimana: 20€ di sconto a persona.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
-
-                                  <div class="col-sm-12 col-md-6 col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Isole da Sogno</h5>
-                                          <h6 class="card-subtitle mb-2 text-body-secondary"><!--Card subtitle--></h6>
-                                          <p class="card-text">Guida turistica inclusa e 10% di sconto sul trasporto su prenotazioni per isole.</p>
-                                          <a href="#" class="card-link">Modifica</a>
-                                          <a href="#" class="card-link">Rimuovi</a>
-                                        </div>
-                                      </div>
-                                  </div>
+            });
+                                </script>
                             </div>
+                            <h2>Aggiungi/Modifica Promozione</h2>
+                            <form id="promozione-form">
+                                <input type="hidden" id="promozione-id">
+                                <label for="titoloPromo">Titolo:</label>
+                                <input type="text" id="titoloPromo" name="titoloPromo"><br>
+                                <label for="descrizionePromo">Descrizione:</label>
+                                <input type="text" id="descrizionePromo" name="descrizionePromo"><br>
+                                <label for="urlFoto">URL img:</label>
+                                <input type="text" id="urlFoto" name="urlFoto"><br>
+                                <button type="submit">Salva</button>
+                            </form>
                     </div>
                 </div>  
             </main>
