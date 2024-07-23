@@ -49,13 +49,38 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
-                    <ul class="dropdown-menu backBlu">
-                        <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
-                    </ul>
+                    <ul class="dropdown-menu backBlu" id="dropdown">
+                      <script>
+                       function isLogged(){
+                       const dropdown = document.getElementById("dropdown")
+                       const token = localStorage.getItem('authToken');
+                       console.log(token);
+                       if (token){
+                         const ul=document.createElement("li")
+                         ul.innerHTML=`
+                         <form onsubmit="logout(event)">
+                               <button type="submit" class="dropdown-item text-white cambioCol" >Logout</button>
+                               </form>
+                         `
+                         dropdown.appendChild(ul)
+                       }else {
+                         const ul=document.createElement("li")
+                         ul.innerHTML=`
+                         <li><a class="dropdown-item text-white cambioCol" href="Accedi.html">Accedi</a></li>
+                       <li>
+                           <hr class="dropdown-divider">
+                       </li>
+                       <li><a class="dropdown-item text-white cambioCol" href="Registrati.html">Registrati</a></li>
+                         
+                         
+                         `
+                         dropdown.appendChild(ul);
+                       }
+                     }
+                     window.onload=isLogged;
+
+                      </script>
+                   </ul>
                 </li>
             </ul>
             </ul>
@@ -333,6 +358,7 @@
   <script src="js/jquery.steps.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/preventivo.js"></script>
+  <script src="js/logout.js"></script>
 
 </body>
 

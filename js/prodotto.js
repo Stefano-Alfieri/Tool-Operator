@@ -71,30 +71,10 @@ destinazioni.forEach(prodotto => {
 
 });
 
-function imgClick(){
-    const img = document.getElementById("imgRim");
-    img.classList.add("d-none");
-    const img2=document.getElementById("imgRim3")
-    img2.classList.remove("d-none")
-}
-
 
 function imgClickCat(){
     const imgC = document.getElementById("Cat2");
     imgC.classList.add("d-none");
     const img2C=document.getElementById("Cat3")
     img2C.classList.remove("d-none")
-}
-
-function imgClickSeg(){
-    const imgChi = document.getElementById("chi1");
-    imgChi.classList.add("d-none");
-    const imgSeg=document.getElementById("seg")
-    imgSeg.classList.remove("d-none")
-}
-function imgClickSeg2(){
-    const imgChi = document.getElementById("bimbo");
-    imgChi.classList.add("d-none");
-    const imgSeg=document.getElementById("troia")
-    imgSeg.classList.remove("d-none")
 }

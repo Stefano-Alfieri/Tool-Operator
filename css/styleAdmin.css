@@ -46,6 +46,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+.backblu2{
+    background-color: #093E77!important;
+}
 
 #sidebar.expand {
     width: 260px;

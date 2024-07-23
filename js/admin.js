@@ -1,9 +1,23 @@
+function init(){
+    isUserLoggedIn();
+    getAllAdmin();
+}
+
+
+function isUserLoggedIn(){
+    const token = localStorage.getItem('authToken');
+    if (!token){
+        window.location.href="./Accedi.html"
+    }
+}
+
+
 async function getAllAdmin() {
-    let cont =0;
+    let cont =1;
     const token = localStorage.getItem('authToken');
     const messageElement = document.getElementById('message');
     try {
-        const response = await fetch('http://localhost:8080/Admin', {
+        const response = await fetch('http://localhost:8080/user/Admin', {
             method: 'GET',
             headers: {
                 'Authorization': `${token}`
@@ -16,8 +30,10 @@ async function getAllAdmin() {
             data.forEach(user => {
                 const userElement = document.createElement('tr');
                 userElement.innerHTML=  `
-                                            <th scope="row">${cont+1}</th>
+                                            <th scope="row">${cont++}</th>
                                             <td>${user.email}</td>
+                                            <td>${user.nome}</td>
+                                            <td>${user.cognome}</td>
                                             <td>${user.ruolo}</td>
                                         `          
                 userListElement.appendChild(userElement);
@@ -33,4 +49,25 @@ async function getAllAdmin() {
         }
     }
 
-    window.onload = getAllAdmin;
+    async function logout(event) {
+        event.preventDefault();
+        const token = localStorage.getItem('authToken');
+    
+    try {
+        const response = await fetch('http://localhost:8080/auth/logout', {
+            method: 'POST',
+            headers: {
+                'Authorization': `${token}`
+            }
+        });
+    
+        if (response.status === 200) {
+            localStorage.removeItem('authToken');
+             window.location.href="./Home.html"
+        }
+    } catch (error) {
+        console.error('Error during logout:', error);
+    }
+}
+
+    window.onload = init;
